@@ -1,0 +1,22 @@
+{
+  "name": "genpark-personal-agent-respiratory-co2-tolerance-bolti-skill",
+  "version": "1.0.0",
+  "description": "Calculates Body Oxygen Level Test (BOLT) score, models Bohr effect tissue oxygenation, and prescribes Buteyko reduced-breathing exercises.",
+  "tools": [
+    {
+      "name": "evaluate_bolt_respiratory_efficiency",
+      "description": "Evaluates BOLT score, Bohr effect tissue oxygenation, and chemoreceptor sensitivity.",
+      "parameters": {
+        "bolt_score_seconds": "float",
+        "resting_respiratory_rate_bpm": "float (optional, default 14.0)"
+      }
+    },
+    {
+      "name": "generate_reduced_breathing_schedule",
+      "description": "Prescribes Buteyko reduced-breathing conditioning exercises to elevate CO2 tolerance.",
+      "parameters": {
+        "bolt_score_seconds": "float"
+      }
+    }
+  ]
+}
